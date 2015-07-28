@@ -1,2 +1,2 @@
 # unlockscreen
-test
+this is a autoit script, my first script.

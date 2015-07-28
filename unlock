@@ -3,7 +3,7 @@ $mybox=MsgBox(4, "unlock screen", "是否要進入會議模式，不鎖定螢幕
 if $mybox = 7 then ; if the answer is no
    msgbox(0, "unlock sreen", "OK. Bye!",3) ; show this msgbox
 Exit
-EndIf
+EndIf 
 unlock()
 Func unlock()
    While 1

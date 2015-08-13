@@ -1,5 +1,6 @@
 #include <GUIConstantsEx.au3>
 #include <FontConstants.au3>
+#include <ColorConstants.au3>
 
 Example()
 
@@ -33,9 +34,13 @@ Func Example()
             Case $idNotepad
                 ; Run Notepad with the window maximized.
  ;               $iPID = Run("notepad.exe", "", @SW_SHOWMAXIMIZED)
- 			     $iPID = Run("fun_unlock.exe")
-				 GUICtrlCreateLabel("Program is running...click close if you want to stop." , 10, 50, 580, 30)
-                 GUICtrlSetFont(-1, 12, $FW_NORMAL, 1, $sFont)
+ 			     $iPID = Run("unlock1.exe")
+				 local $label2 = GUICtrlCreateLabel("Program is running..." , 10, 50, 580, 30)
+                 GUICtrlSetFont($label2, 12, $FW_BOLD, 1, $sFont)
+			     GUICtrlSetColor($label2, $COLOR_RED)
+				 local $label3 = GUICtrlCreateLabel("Click close if you want to stop." , 10, 70, 580, 30)
+				 GUICtrlSetFont($label3, 12, $FW_BOLD, 1, $sFont)
+			     GUICtrlSetColor($label3, $COLOR_RED)
 
         EndSwitch
     WEnd
@@ -45,5 +50,4 @@ Func Example()
 
     ; Close the Notepad process using the PID returned by Run.
     If $iPID Then ProcessClose($iPID)
-	EndFunc
-
+    EndFunc

@@ -34,7 +34,7 @@ Func Example()
             Case $idNotepad
                 ; Run Notepad with the window maximized.
  ;               $iPID = Run("notepad.exe", "", @SW_SHOWMAXIMIZED)
- 			     $iPID = Run("unlock1.exe")
+ 			     $iPID = Run("fun_unlock.exe")
 				 local $label2 = GUICtrlCreateLabel("Program is running..." , 10, 50, 580, 30)
                  GUICtrlSetFont($label2, 12, $FW_BOLD, 1, $sFont)
 			     GUICtrlSetColor($label2, $COLOR_RED)
